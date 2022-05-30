@@ -5,50 +5,61 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
-  <body>
+  <body class="body-page">
 
-    <header class="aaa">
+    <header class="title">
       <img src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
-      <a class="more_inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+      <a class="title__info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
 
-    <main class="centered-main-page-element">
-      <article id="top-section-for-adding-element-to-list">
-        <h3>Add Item</h3> <!--<label for="new-task">Add Item</label>-->
-        <div class="task-row-wrapper">
-          <input id="new-task" class="task" type="text">
-          <button>Add</button>
+    <main class="main-page"> <!-- centered-main-page-element-->
+      <article class="main_page__add-block"> <!-- id=top-section-for-adding-element-to-list-->
+        <h3 class="main-page__heading">Add Item</h3> <!--<label for="new-task">Add Item</label>-->
+        <div class="main-page__row-wrapper"> <!-- task-row-wrapper-->
+          <input id="main-page__add-input" 
+                 class="main-page__task main-page__add-input" 
+                 type="text"> <!--  id="new-task" class="task" type="text"-->
+          <button class="main-page__btn main-page__add-btn">Add</button> <!-- -->
         </div>
       </article>
 
-      <article>
-        <h3>Todo</h3>
-        <ul id="incomplete-tasks">
-          <li>
-            <input type="checkbox">
-            <label class="task">Pay Bills</label>
-            <input type="text" class="task">
-            <button class="edit">Edit</button>
-            <button class="delete"><img src="./remove.svg" alt="remove"></button>
+      <article class="main-page__todo-block"> <!-- -->
+        <h3 class="main-page__heading">Todo</h3> <!-- + -->
+        <ul class="main-page__opened-tasks"> <!--id="incomplete-tasks -->
+          <li class="main-page__list main-page__open-mode"> <!--+ -->
+            <input class="main-page__checkbox" type="checkbox"> <!-- + -->
+            <label class="main-page__label">Pay Bills</label> <!-- .task -->
+            <input class="main-page__input-text main-page__task" 
+                   type="text" > <!--class="task" type="text"  -->
+            <button class="main-page__btn main-page__btn_edit">Edit</button> <!-- .edit -->
+            <button class="main-page__btn main-page__btn_del"> <!-- .delete-->
+              <img src="./remove.svg" alt="remove">
+            </button>
           </li>
-          <li class="edit-mode">
-            <input type="checkbox">
-            <label class="task">Go Shopping</label>
-            <input type="text" value="Go Shopping" class="task">
-            <button class="edit">Save</button>
-            <button class="delete"><img src="./remove.svg" alt="remove"></button>
+          <li class="main-page__list main-page__edit-mode"> <!-- .edit-mode-->
+            <input class="main-page__checkbox" type="checkbox"> <!--type="checkbox" -->
+            <label class="main-page__label">Go Shopping</label> <!-- .class -->
+            <input class="main-page__input-text main-page__task" 
+                   type="text" value="Go Shopping"> <!-- class="task" type="text" -->
+            <button class="main-page__btn main-page__btn_edit">Save</button>  <!-- .edit-->
+            <button class="main-page__btn main-page__btn_del"> <!-- .delete-->
+              <img src="./remove.svg" alt="remove">
+            </button>
           </li>
         </ul>
       </article>
 
-      <article>
-        <h3>Completed</h3>
-        <ul id="completed-tasks">
-          <li><input type="checkbox" checked>
-            <label class="task">See the Doctor</label>
-            <input type="text" class="task">
-            <button class="edit">Edit</button>
-            <button class="delete"><img src="./remove.svg" alt="remove"></button>
+      <article class="main-page__closed-block"> <!-- + -->
+        <h3 class="main-page__heading">Completed</h3> <!-- + -->
+        <ul class="main-page__closed-tasks"> <!-- id="completed-tasks -->
+          <li class="main-page__list main-page__close-mode "> <!-- + -->
+            <input class="main-page__checkbox" type="checkbox" checked> <!-- + -->
+            <label class="main-page__label">See the Doctor</label> <!-- .task -->
+            <input  class="main-page__input-text main-page__task" type="text"> <!-- .task-->
+            <button class="main-page__btn main-page__btn_edit">Edit</button> <!-- .edit-->
+            <button class="main-page__btn main-page__btn_del"> <!-- .delete -->
+              <img src="./remove.svg" alt="remove">
+            </button>
           </li>
         </ul>
       </article>
