@@ -1,19 +1,66 @@
+<!DOCTYPE html>
 <html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
-</body>
+  <head>
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" media="screen" charset="utf-8">
+  </head>
+  <body class="body-page">
+
+    <header class="title">
+      <img src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
+      <a class="title__info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    </header>
+
+    <main class="main-page">
+      <article class="main_page__add-block">
+        <h3 class="main-page__heading">Add Item</h3>
+        <div class="main-page__row-wrapper">
+          <input id="main-page__add-input" class="main-page__task main-page__add-input" type="text">
+          <button class="main-page__btn main-page__add-btn">Add</button>
+        </div>
+      </article>
+
+      <article class="main-page__todo-block">
+        <h3 class="main-page__heading">Todo</h3>
+        <ul class="main-page__opened-tasks">
+          <li class="main-page__list main-page__open-mode">
+            <input class="main-page__checkbox" type="checkbox">
+            <label class="main-page__label">Pay Bills</label>
+            <input class="main-page__task main-page__input-text" type="text">
+            <button class="main-page__btn main-page__btn_edit">Edit</button>
+            <button class="main-page__btn main-page__btn_del">
+              <img src="./remove.svg" alt="remove">
+            </button>
+          </li>
+          <li class="main-page__list main-page__edit-mode">
+            <input class="main-page__checkbox" type="checkbox">
+            <label class="main-page__label">Go Shopping</label>
+            <input class="main-page__task main-page__input-text" type="text" value="Go Shopping">
+            <button class="main-page__btn main-page__btn_edit">Save</button>
+            <button class="main-page__btn main-page__btn_del">
+              <img src="./remove.svg" alt="remove">
+            </button>
+          </li>
+        </ul>
+      </article>
+
+      <article class="main-page__closed-block">
+        <h3 class="main-page__heading">Completed</h3>
+        <ul class="main-page__closed-tasks">
+          <li class="main-page__list main-page__close-mode ">
+            <input class="main-page__checkbox" type="checkbox" checked>
+            <label class="main-page__label">See the Doctor</label>
+            <input  class="main-page__task main-page__input-text" type="text">
+            <button class="main-page__btn main-page__btn_edit">Edit</button>
+            <button class="main-page__btn main-page__btn_del">
+              <img src="./remove.svg" alt="remove">
+            </button>
+          </li>
+        </ul>
+      </article>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
